@@ -4,6 +4,7 @@ int main(){
     x = __VERIFIER_nondet_int();
     z = __VERIFIER_nondet_int();
     if (a > 25000 && x == 30000){
+        
         while (y++ < z) {
             if (y % 3 != 0) {
                 a++; x--;
