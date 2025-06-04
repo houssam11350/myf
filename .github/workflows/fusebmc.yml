@@ -62,4 +62,4 @@ jobs:
       if: steps.fusebmc-analysis.outputs.vulnerabilities_found == 'true'
       run: |
         echo "Vulnerabilities were found. Pipeline failed."
-        exit 1
+        exit 2
