@@ -49,10 +49,9 @@ jobs:
     - name: Run FuSeBMC on changed C files
       id: fusebmc-analysis
       run: |
-        echo mkdir -p ${{ github.workspace }}/sarif_output  
+        echo  ${{ github.workspace }}/sarif_output  
         vulnerabilities_found=false
-        vulnerabilities_found=$vulnerabilities_found" >> $GITHUB_OUTPUT
-
+        
     - name: Upload SARIF files for Code Scanning
       uses: github/codeql-action/upload-sarif@v3
       with:
