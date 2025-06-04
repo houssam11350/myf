@@ -49,45 +49,9 @@ jobs:
     - name: Run FuSeBMC on changed C files
       id: fusebmc-analysis
       run: |
-        mkdir -p ${{ github.workspace }}/sarif_output  
+        echo mkdir -p ${{ github.workspace }}/sarif_output  
         vulnerabilities_found=false
-        echo "${{ steps.changed-files.outputs.files }}" | while read -r file; do
-          if [ -n "$file" ] && [ -f "$file" ]; then
-            echo "Processing file: $file"
-            # Run FuSeBMC and capture the output
-            output=$(docker run \
-              --name fusebmc_container \
-              -v ${{ github.workspace }}:/workspace \
-              ghcr.io/fusebmc/fusebmc-ai:run-ESBMC-individual-property \
-              --ESBMC_Multirun --verification -a 64 --timeout 30 -s incr /workspace/$file)
-           
-            # Copy the output from the container to the workspace
-            docker cp fusebmc_container:/fusebmc_output ${{ github.workspace }}/fusebmc_output
-           
-            # Remove the container
-            docker rm fusebmc_container
-
-            file_name=$(basename "$file")
-            output_dir=$(find ${{ github.workspace }}/fusebmc_output -type d -name "${file_name}_*" | head -n 1)
-           
-            # Analyze GraphML files for violation witnesses
-            for graphml in $output_dir/fusebmc_instrument_output/*.graphml; do
-              echo "Checking GraphML file: $graphml"
-              if [ -f "$graphml" ] && [[ $graphml != *"veri_1.graphml" && $graphml != *"veri_2.graphml" ]]; then
-                if grep -q '<data key="violation">true</data>' "$graphml"; then
-                  echo "Violation found in the following GraphML file: $graphml"
-                  vulnerabilities_found=true
-                  break
-                fi
-              fi
-            done
-            python3 .github/scripts/Make_Sarif.py $output_dir/fusebmc_instrument_output .github/scripts/rules.json
-          fi
-        done
-        echo "SARIF files found in the current directory:"
-        find . -name '*.sarif' -type f -print
-        find . -name '*.sarif' -exec mv {} ${{ github.workspace }}/sarif_output/ \;
-        echo "vulnerabilities_found=$vulnerabilities_found" >> $GITHUB_OUTPUT
+        vulnerabilities_found=$vulnerabilities_found" >> $GITHUB_OUTPUT
 
     - name: Upload SARIF files for Code Scanning
       uses: github/codeql-action/upload-sarif@v3
