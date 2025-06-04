@@ -51,6 +51,7 @@ jobs:
       run: |
         echo  ${{ github.workspace }}/sarif_output  
         vulnerabilities_found=false
+        ls -l
         
     - name: Upload SARIF files for Code Scanning
       uses: github/codeql-action/upload-sarif@v3
