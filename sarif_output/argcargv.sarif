@@ -1,0 +1,274 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "FuSeBMC",
+          "contents": [
+            "localizedData",
+            "nonLocalizedData"
+          ],
+          "informationUri": "https://github.com/kaled-alshmrany/FuSeBMC",
+          "language": "en-US",
+          "rules": [
+            {
+              "id": "align",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "align",
+              "shortDescription": {
+                "text": "Pointer alignment vulnerability"
+              }
+            },
+            {
+              "id": "assertions",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "assertions",
+              "shortDescription": {
+                "text": "User defined assertion violated"
+              }
+            },
+            {
+              "id": "atomicity",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "atomicity",
+              "shortDescription": {
+                "text": "Violation of atomic assignments"
+              }
+            },
+            {
+              "id": "bounds",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "bounds",
+              "shortDescription": {
+                "text": "Array bounds violated"
+              }
+            },
+            {
+              "id": "data-races",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "data-races",
+              "shortDescription": {
+                "text": "Data race detected"
+              }
+            },
+            {
+              "id": "deadlock",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "deadlock",
+              "shortDescription": {
+                "text": "Deadlock detected"
+              }
+            },
+            {
+              "id": "div-by-zero",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "div-by-zero",
+              "shortDescription": {
+                "text": "Division by zero"
+              }
+            },
+            {
+              "id": "lock-order",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "lock-order",
+              "shortDescription": {
+                "text": "Inconsistent lock acquisition order"
+              }
+            },
+            {
+              "id": "nan",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "nan",
+              "shortDescription": {
+                "text": "Not-a-Number (NaN) value detected"
+              }
+            },
+            {
+              "id": "overflow",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "overflow",
+              "shortDescription": {
+                "text": "Integer overflow detected"
+              }
+            },
+            {
+              "id": "pointer",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "pointer",
+              "shortDescription": {
+                "text": "Invalid pointer dereference"
+              }
+            },
+            {
+              "id": "struct-fields",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "struct-fields",
+              "shortDescription": {
+                "text": "Uninitialized struct fields"
+              }
+            },
+            {
+              "id": "ub-shift",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "ub-shift",
+              "shortDescription": {
+                "text": "Undefined behavior due to shift operation"
+              }
+            },
+            {
+              "id": "unlimited-scanf",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "unlimited-scanf",
+              "shortDescription": {
+                "text": "Unlimited input length in scanf"
+              }
+            },
+            {
+              "id": "unsigned-overflow",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "unsigned-overflow",
+              "shortDescription": {
+                "text": "Unsigned integer overflow"
+              }
+            },
+            {
+              "id": "vla-size",
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "error",
+                "rank": -1.0
+              },
+              "fullDescription": {
+                "text": "Placeholder"
+              },
+              "name": "vla-size",
+              "shortDescription": {
+                "text": "Variable-length array size violation"
+              }
+            }
+          ],
+          "version": "AI-dev"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2025-06-04T07:59:23.770235Z",
+          "startTimeUtc": "2025-06-04T07:59:23.770226Z"
+        }
+      ],
+      "language": "en-US",
+      "newlineSequences": [
+        "\r\n",
+        "\n"
+      ],
+      "results": []
+    }
+  ],
+  "version": "2.1.0"
+}
