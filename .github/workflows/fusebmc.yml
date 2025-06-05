@@ -58,7 +58,8 @@ jobs:
     - name: Upload SARIF files for Code Scanning
       uses: github/codeql-action/upload-sarif@v3
       with:
-        sarif_file: ./sarif_output/argcargv.sarif
+        #sarif_file: ./sarif_output/argcargv.sarif
+        sarif_file: ./sarif_outtput2/unsafe_code.sarf
 
     - name: Fail if vulnerabilities found
       #if: steps.fusebmc-analysis.outputs.vulnerabilities_found == 'true'
